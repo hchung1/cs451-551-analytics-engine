@@ -43,7 +43,6 @@ def grade_avg(midterm, final):
     count_f += points[final[i]]
   count_m = average[int(count_m/len(midterm))]
   count_f = average[int(count_f/len(final))]
-  print ("The average class grade for midterm is %s.\n" % (count_m))
   print ("The average class grade for final is %s.\n\n" % (count_f))
   return count_m, count_f
 def average_change(midterm, final):
