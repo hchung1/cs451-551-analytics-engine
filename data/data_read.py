@@ -50,8 +50,12 @@ def average_change(midterm, final):
   change = 0
   for i in final:
     change += int((final[i]-midterm[i])*points[i])
-  print ("The overall change in class is %s.\n" % (str(change)))
-  return change
+  hi = "remained the same"
+  if (change > 0):
+    hi = "increased"
+  if (change < 0):
+    hi = "decreased"
+  print ("The overall grade average change in class %s by %i points.\n" % (hi, change))
 data = read_file()
 males, females = gender(data)
 midterm, final = grades(data)
